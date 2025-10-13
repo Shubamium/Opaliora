@@ -1,0 +1,102 @@
+#p_home {
+  // .stp {
+  //   width: 800px;
+  //   height: 500px;
+  //   margin: 0 auto;
+  //   margin-top: 200px;
+
+  //   .art {
+  //     width: 100%;
+  //     height: 100%;
+  //     object-fit: cover;
+  //   }
+  // }
+
+  .introtext {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border: none;
+    border-radius: 0;
+    color: white;
+    box-shadow: 0px 0px 54px 14px #9dccf97d;
+    &::after {
+      z-index: 1;
+    }
+    .content {
+      position: relative;
+      z-index: 100;
+      text-shadow: 0px 3px 4px #3a638a50;
+      .oribon {
+        height: 100px;
+        margin-top: -50px;
+        margin-bottom: -50px;
+      }
+      h2 {
+        font-family: var(--fontS);
+        font-size: 2.5rem;
+        padding: 1em;
+        font-weight: lighter;
+      }
+    }
+  }
+
+  // margin-top: 400px;
+  .introvid {
+    &::after {
+      display: none;
+    }
+    max-width: min(1280px, 90%);
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: cover;
+    }
+  }
+
+  .opaintro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 1500px;
+    gap: 1em;
+    margin: 200px auto;
+    .splash-c {
+      .splash {
+        animation: orasplash 4s infinite ease alternate;
+        position: absolute;
+        right: 40%;
+
+        @keyframes orasplash {
+          from {
+            transform: scale(0.98) rotate(-5deg) translateY(-50px);
+          }
+          to {
+            transform: scale(1) rotate(0deg);
+          }
+        }
+      }
+    }
+
+    article {
+      padding-top: 200px;
+      filter: drop-shadow(0px 0px 5px white);
+      h2 {
+        color: white;
+        font-family: var(--fontSR);
+        font-size: 6rem;
+      }
+      p {
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 1em;
+      }
+      .btn-main {
+        margin: 20px 0;
+      }
+    }
+  }
+}

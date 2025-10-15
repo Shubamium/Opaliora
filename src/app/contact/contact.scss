@@ -1,0 +1,185 @@
+#p_contact {
+  #contact-list {
+    height: 100vh;
+    .confine {
+      max-width: 1440px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      position: relative;
+      height: 1080px;
+      gap: 200px;
+      .l {
+        width: 100%;
+        .hbd {
+          // position: absolute;
+          // bottom: 0%;
+          height: 1080px;
+          position: absolute;
+          left: -50%;
+          top: 10%;
+          mask-image: linear-gradient(to bottom, white 95%, transparent 100%);
+          // left: 0%;
+        }
+      }
+      .r {
+        .c-h {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-top: 140px;
+          max-width: 80%;
+          text-align: center;
+          color: white;
+          text-shadow: 0px 0px 4px white;
+          .sth {
+            font-size: 6rem;
+          }
+        }
+
+        .cl {
+          display: flex;
+          gap: 2em;
+          align-items: center;
+          padding-left: 10%;
+          .btn-ct {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-width: 3px;
+            justify-content: center;
+            &::after {
+              box-shadow: 0px 0px 30px inset var(--b);
+            }
+            &:hover {
+              background: var(--p);
+            }
+            &:nth-child(2) {
+              margin-top: 50px;
+            }
+            &:nth-child(3) {
+              margin-top: 100px;
+            }
+            svg {
+              height: 80px;
+              color: white;
+              width: 80px;
+              filter: drop-shadow(0px 0px 4px var(--p));
+            }
+            span {
+              filter: drop-shadow(0px 0px 4px var(--p));
+              color: white;
+              font-size: 1.2rem;
+            }
+            .oribon {
+              position: absolute;
+              height: 40px;
+              object-fit: contain;
+              bottom: -30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #contact-form {
+    min-height: 100vh;
+    margin-top: 450px;
+
+    .confine {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1280px;
+      margin: 0 auto;
+      gap: 100px;
+      align-items: flex-start;
+      .l {
+        padding-top: 50px;
+        color: white;
+        filter: drop-shadow(0px 0px 4px white);
+        .sth {
+          font-size: 5rem;
+        }
+        perspective: 800px;
+        .chib {
+          height: 220px;
+          animation: spinchib 5s infinite ease-in-out;
+
+          margin-bottom: -10px;
+          transform-origin: bottom;
+          @keyframes spinchib {
+            from {
+              transform: rotateZ(0deg) rotateY(0deg);
+            }
+            30% {
+              transform: rotateZ(10deg) rotateY(-360deg);
+            }
+            50% {
+              transform: translateX(-20%) rotateZ(-10deg) translateY(-10%);
+            }
+            80% {
+              transform: translateX(-10%) rotateZ(0deg) translateY(-25%);
+            }
+          }
+        }
+      }
+      .r {
+        .fg {
+          display: flex;
+          gap: 1em;
+        }
+        .if {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 20px;
+          label {
+            color: white;
+            font-family: var(--fontSR);
+            font-size: 2rem;
+            filter: drop-shadow(0px 0px 4px white);
+          }
+          input,
+          textarea {
+            width: 100%;
+            padding: 1em;
+            border-radius: 1em;
+            border: 2px solid white;
+            outline: none;
+            background: linear-gradient(to right, var(--b), var(--p));
+            color: rgba(255, 255, 255, 0.89);
+            font-family: var(--fontS);
+            outline-offset: -52px;
+            transition: all 500ms ease;
+            &:focus {
+              outline: 5px solid var(--p);
+              outline-offset: 5px;
+            }
+            font-size: 1.1rem;
+          }
+          textarea {
+            resize: none;
+            min-height: 300px;
+          }
+        }
+
+        .actions {
+          display: flex;
+          justify-content: center;
+          .btn-main {
+            font-family: var(--fontSR);
+            outline-width: 2px;
+            padding: 0.25em 2em;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

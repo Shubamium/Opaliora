@@ -38,7 +38,7 @@ export default function page({}: Props) {
           </div>
           <div className="pillar">
             <img src="/g/pillar_c.png" alt="" className="plart" />
-            <Link href={"/lore/vaelorans"} className="btn btn-pillar stp">
+            <Link href={"/archive/vaelorans"} className="btn btn-pillar stp">
               <img src="/g/art8.png" alt="" className="bg" />
               <img src="/d/magic_circle1.png" alt="" className="magic" />
               <div className="content">
@@ -49,7 +49,7 @@ export default function page({}: Props) {
           </div>
           <div className="pillar">
             <img src="/g/pillar_l.png" alt="" className="plart" />
-            <Link href={"/lore/mission"} className="btn btn-pillar stp">
+            <Link href={"/archive/mission"} className="btn btn-pillar stp">
               <img src="/g/art6.png" alt="" className="bg" />
               <img src="/d/magic_circle1.png" alt="" className="magic" />
               <div className="content">

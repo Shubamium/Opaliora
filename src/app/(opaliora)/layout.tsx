@@ -4,6 +4,7 @@ import "./globals.scss";
 import localFont from "next/font/local";
 import { CSSProperties } from "react";
 import Header from "./components/header/Header";
+import Loading from "./components/loading/Loading";
 
 export const revalidate = 0;
 
@@ -51,6 +52,7 @@ export default function RootLayout({
           } as CSSProperties
         }
       >
+        <Loading />
         <Header />
         {children}
       </body>

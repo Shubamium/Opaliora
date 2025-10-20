@@ -50,7 +50,7 @@ export default buildConfig({
           disablePayloadAccessControl: true,
         },
       },
-
+      clientUploads: true,
       config: {
         endpoint: "https://minio-api.venmi.art",
         forcePathStyle: true,

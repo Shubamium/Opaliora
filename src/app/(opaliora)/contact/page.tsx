@@ -1,13 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 type Props = {};
 import "./contact.scss";
 import PageBackground from "../components/pbg/PageBackground";
 import IntersectBackground from "../components/pbg/IntersectBackground";
 import useBackgroundChanger from "../utils/useBackgroundChanger";
 import { FaXTwitter } from "react-icons/fa6";
+import { MailProps, sendMail } from "../utils/mail.";
+import { BiLoaderCircle } from "react-icons/bi";
 export default function Contact({}: Props) {
   const { scope, activeBG } = useBackgroundChanger();
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
   return (
     <main id="p_contact" ref={scope}>
       <PageBackground bg={activeBG} />
@@ -61,6 +67,10 @@ export default function Contact({}: Props) {
           </div>
         </div>
       </IntersectBackground>
+      <div className={`loading ${loading ? "active" : ""}`}>
+        <BiLoaderCircle />
+        <p className="message">{status}</p>
+      </div>
       <IntersectBackground bg="/b/bg6.png" id="contact-form">
         <div className="confine">
           <div className="l">
@@ -71,7 +81,29 @@ export default function Contact({}: Props) {
               repellat similique suscipit? Lorem ipsum dolor sit amet.
             </p>
           </div>
-          <form className="r">
+          <form
+            className="r"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target as HTMLFormElement);
+              const data = Object.fromEntries(formData) as MailProps;
+              setLoading(true);
+              setStatus("Please wait, submitting form . . .");
+              const result = await sendMail(data);
+              setStatus(
+                result
+                  ? "Message sent!"
+                  : "ERROR: Failed to send the message..."
+              );
+              setTimeout(() => {
+                setLoading(false);
+              }, 2000);
+
+              if (result) {
+                (e.target as HTMLFormElement).reset();
+              }
+            }}
+          >
             <div className="fg">
               <div className="if">
                 <label htmlFor="name">NAME</label>
@@ -110,7 +142,9 @@ export default function Contact({}: Props) {
               ></textarea>
             </div>
             <div className="actions">
-              <button className="btn btn-main">SUBMIT</button>
+              <button className="btn btn-main" type="submit">
+                SUBMIT
+              </button>
             </div>
           </form>
         </div>

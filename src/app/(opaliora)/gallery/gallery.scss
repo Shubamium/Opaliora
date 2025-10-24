@@ -4,18 +4,25 @@
   padding-bottom: 200px;
   #gallery-main {
     .confine {
-      max-width: 1400px;
+      max-width: min(1400px, 90%);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 100px;
       height: 700px;
-
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+      }
       .gallery-panel {
         height: 100%;
         width: 100%;
         background: linear-gradient(to bottom, var(--p), var(--b));
         border-width: 3px;
+        @media screen and (max-width: 1024px) {
+          min-height: 50vh;
+        }
         .art {
           position: absolute;
           width: 100%;
@@ -98,6 +105,9 @@
       justify-content: center;
       align-items: center;
       margin: 100px 0;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
       .oribon {
         height: 70px;
       }
@@ -107,12 +117,18 @@
       flex-wrap: wrap;
       gap: 2em;
       justify-content: center;
+      @media screen and (max-width: 420px) {
+        max-width: 90%;
+        margin: 0 auto;
+      }
       .gcard {
         width: 400px;
         aspect-ratio: 16 / 10;
         border-width: 2px;
         position: relative;
-        box-shadow: 0px 0px 10px white, 0px 0px 10px 2px white inset;
+        box-shadow:
+          0px 0px 10px white,
+          0px 0px 10px 2px white inset;
         z-index: 1;
         transform: translate(1px);
         .art {

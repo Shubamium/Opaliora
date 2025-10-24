@@ -22,11 +22,23 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40%;
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1em;
+        margin-top: 20vh;
+        height: auto;
+      }
 
       color: white;
       p {
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.639);
         margin-bottom: 1.5em;
+        @media screen and (max-width: 420px) {
+          font-size: 0.9rem;
+          text-align: justify;
+        }
       }
       .l {
         h2 {
@@ -34,6 +46,9 @@
           filter: drop-shadow(0px 0px 2px white);
           font-family: var(--fontSR);
           font-weight: lighter;
+          @media screen and (max-width: 420px) {
+            font-size: 4rem;
+          }
         }
       }
       .r {
@@ -43,6 +58,9 @@
   }
 
   #lorepart {
+    @media screen and (max-width: 550px) {
+      padding-top: 40px;
+    }
     .title {
       grid-template-columns: initial;
       max-width: min(1440px, 90%);
@@ -57,6 +75,10 @@
           width: 100%;
           font-weight: lighter;
           filter: drop-shadow(0px 0px 2px white);
+          @media screen and (max-width: 420px) {
+            font-size: 4rem;
+            padding: 10px 0;
+          }
         }
       }
     }
@@ -67,10 +89,20 @@
       grid-template-columns: 50px 1fr 50px;
       align-items: center;
       gap: 1em;
+      position: relative;
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
       .list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2em;
+        @media screen and (max-width: 1280px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 550px) {
+          grid-template-columns: 1fr;
+        }
         .lorecard {
           width: 100%;
           height: 100%;
@@ -120,6 +152,10 @@
               text-shadow: 0px 2px 4px rgb(97, 141, 208);
               transition: all 500ms ease;
               transition-delay: 150ms;
+
+              @media screen and (max-width: 768px) {
+                font-size: 1.4rem;
+              }
             }
           }
           .content {
@@ -133,6 +169,10 @@
             transition: all 500ms ease;
             font-size: 1.1rem;
             overflow-y: auto;
+
+            @media screen and (max-width: 800px) {
+              font-size: 0.9rem;
+            }
             max-height: 100%;
           }
 
@@ -165,6 +205,21 @@
       }
 
       .ctrl {
+        @media screen and (max-width: 1024px) {
+          position: absolute;
+          left: 0%;
+          z-index: 100;
+
+          &.r {
+            position: absolute;
+            left: initial;
+            right: 0%;
+          }
+        }
+
+        @media screen and (max-width: 550px) {
+          top: -80px;
+        }
         .btn-control {
           width: 50px;
           height: 50px;
@@ -200,15 +255,30 @@
   }
 
   #power {
-    max-width: 1440px;
+    max-width: min(1440px, 90%);
     margin: 0 auto;
+    @media screen and (max-width: 1280px) {
+      margin: 200px auto;
+    }
     .powerhead {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       max-width: 80%;
       margin: 0 auto;
-
+      @media screen and (max-width: 1280px) {
+        grid-template-columns: 2fr 1fr;
+        margin-bottom: 50px;
+      }
+      @media screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
       .text {
         text-align: center;
         display: flex;
@@ -258,6 +328,12 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2em;
       margin-top: 10px;
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex: 0 1 auto;
+      }
       .power {
         background: linear-gradient(to bottom, var(--p), #3ea2ff);
         display: flex;
@@ -272,6 +348,10 @@
           height: 200px;
           object-fit: contain;
           margin-top: -100px;
+          @media screen and (max-width: 1280px) {
+            height: 180px;
+            margin-top: -75px;
+          }
         }
         color: var(--p);
         text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.11);
@@ -283,6 +363,9 @@
         h2 {
           font-family: var(--fontSR);
           font-size: 2.5rem;
+          @media screen and (max-width: 550px) {
+            font-size: 1.7rem;
+          }
         }
         .hr {
           margin: 0.55em;
@@ -290,6 +373,11 @@
         &::before {
           z-index: -15;
           opacity: 0.4;
+        }
+        p {
+          @media screen and (max-width: 420px) {
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -317,6 +405,15 @@
       bottom: 0%;
       left: 0%;
       z-index: -10;
+      @media screen and (max-width: 800px) {
+        background-position: 20% bottom;
+      }
+      @media screen and (max-width: 600px) {
+        background-position: -420px bottom;
+      }
+      @media screen and (max-width: 500px) {
+        background-position: -520px bottom;
+      }
     }
     padding-top: 200px;
 
@@ -326,6 +423,10 @@
       color: white;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 50px;
+      }
       h2 {
         font-size: 4rem;
         color: white;
@@ -335,14 +436,20 @@
       }
       .dislikes {
         text-align: right;
+        @media screen and (max-width: 1024px) {
+          text-align: left;
+        }
       }
-      .r {
-      }
+
       .sd {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
         min-width: 400px;
+        @media screen and (max-width: 1024px) {
+          min-width: auto;
+          width: 80%;
+        }
         .r {
           border-width: 3px;
           padding: 0em 1em;
@@ -365,6 +472,9 @@
           p {
             font-size: 2rem;
             text-shadow: 0px 0px 4px rgb(202, 200, 200);
+            @media screen and (max-width: 420px) {
+              font-size: 1.3rem;
+            }
           }
         }
       }
@@ -379,7 +489,10 @@
       display: flex;
       padding: 1em;
       gap: 1em;
-
+      @media screen and (max-width: 800px) {
+        max-width: 90%;
+        flex-direction: column;
+      }
       &::before {
         opacity: 0;
       }
@@ -425,6 +538,9 @@
           white 98%,
           transparent 100%
         );
+        @media screen and (max-width: 420px) {
+          flex-direction: column;
+        }
         .ff-card {
           // flex: 1 0;
           flex-shrink: 0;
@@ -460,13 +576,20 @@
     #voices {
       padding-top: 300px;
       display: flex;
-      max-width: 1440px;
+      max-width: min(1440px, 90%);
       margin: 0 auto;
       justify-content: space-between;
       width: 100%;
       text-shadow: 0px 0px 4px rgb(243, 236, 236);
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 2em;
+      }
       .l {
         width: 400px;
+        @media screen and (max-width: 420px) {
+          width: 100%;
+        }
         h2 {
           font-size: 5rem;
           color: white;
@@ -522,14 +645,23 @@
       .r {
         width: 400px;
         padding-top: 5em;
+        @media screen and (max-width: 420px) {
+          width: 100%;
+        }
         .voicepanel {
           padding: 2em;
+          @media screen and (max-width: 420px) {
+            padding: 1em;
+          }
 
           color: white;
           background: linear-gradient(to bottom, var(--b), var(--p));
           min-height: 500px;
           h3 {
             font-size: 2rem;
+            @media screen and (max-width: 420px) {
+              font-size: 1.5rem;
+            }
           }
           &::after {
             opacity: 0.1;

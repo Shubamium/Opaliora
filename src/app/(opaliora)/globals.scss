@@ -195,6 +195,8 @@ button {
   mask-image: linear-gradient(to bottom, white 35%, transparent);
   z-index: -10;
   opacity: 0.5;
+  user-select: none;
+  pointer-events: none;
 
   &::before {
     content: "";

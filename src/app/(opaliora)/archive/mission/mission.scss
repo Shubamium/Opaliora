@@ -21,6 +21,11 @@
         font-size: 5rem;
         color: white;
         line-height: 1;
+        text-align: center;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 3rem;
+        }
       }
     }
 
@@ -30,7 +35,12 @@
       align-items: flex-end;
       gap: 50px;
       padding-top: 100px;
-
+      @media screen and (max-width: 1024px) {
+        gap: 10px;
+      }
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
       .mirror {
         height: 550px;
         width: 400px;
@@ -45,6 +55,14 @@
         box-shadow: 0px 0px 10px white;
         transition: all 800ms ease;
 
+        @media screen and (max-width: 1024px) {
+          height: 300px;
+          width: 100%;
+          border-radius: 2em 2em 0 0;
+        }
+        @media screen and (max-width: 550px) {
+          height: 200px;
+        }
         &:hover {
           box-shadow: 0px 0px 40px var(--b);
           transform: translateY(-10px);
@@ -66,6 +84,13 @@
         &:nth-child(2) {
           height: 650px;
           width: 450px;
+          @media screen and (max-width: 1024px) {
+            height: 340px;
+            width: 100%;
+          }
+          @media screen and (max-width: 550px) {
+            height: 300px;
+          }
         }
         .title {
           font-size: 2rem;
@@ -75,6 +100,9 @@
           cursor: pointer;
           padding-top: 100px;
           color: white;
+          @media screen and (max-width: 1024px) {
+            font-size: 1.4rem;
+          }
         }
         .oribon {
           position: absolute;
@@ -110,6 +138,13 @@
   .btn-backto {
     font-size: 1.3rem;
     outline-width: 3px;
+    @media screen and (max-width: 420px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1rem;
+    }
   }
   #slumber {
     padding-top: 0px;
@@ -128,6 +163,13 @@
           max-width: 80%;
           text-shadow: 0px 0px 4px white;
           text-align: center;
+          @media screen and (max-width: 800px) {
+            font-size: 1.4rem;
+            margin-top: 2em;
+          }
+          @media screen and (max-width: 420px) {
+            max-width: 95%;
+          }
         }
         .clock {
           filter: drop-shadow(0px 0px 4px var(--b));
@@ -152,6 +194,11 @@
         gap: 3em;
         padding-bottom: 200px;
         align-items: flex-start;
+        @media screen and (max-width: 1024px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         .l {
           padding-top: 50px;
           .sth {
@@ -163,6 +210,7 @@
             display: flex;
             gap: 2em;
             padding-top: 0.5em;
+            flex-wrap: wrap;
             .fragment {
               cursor: initial;
               rotate: -3deg;
@@ -185,6 +233,9 @@
                 z-index: 10;
                 text-shadow: 0px 0px 4px rgb(48, 19, 87);
                 font-size: 2rem;
+                @media screen and (max-width: 1440px) {
+                  font-size: 1.4rem;
+                }
               }
             }
           }
@@ -196,11 +247,15 @@
           flex-direction: column;
           align-items: flex-end;
           gap: 1em;
+          max-width: 100%;
           .crystal-chamber {
             height: 300px;
             border-width: 3px;
             aspect-ratio: 16 / 9;
             border-radius: 1em;
+            @media screen and (max-width: 800px) {
+              height: auto;
+            }
             overflow: hidden;
             .art {
               width: 100%;
@@ -241,9 +296,12 @@
       }
       .sth {
         font-size: 7rem;
+        @media screen and (max-width: 550px) {
+          font-size: 4rem;
+        }
       }
       align-items: center;
-
+      gap: 2em;
       &.l {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -257,6 +315,18 @@
         }
         .sth {
           text-align: right;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        &.l {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &.r {
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column-reverse;
         }
       }
     }
@@ -274,6 +344,9 @@
       padding: 2em 0;
       max-width: 90%;
       margin: 0 auto;
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
       .l {
         .pfp {
           width: 250px;
@@ -286,13 +359,22 @@
       .r {
         max-width: 700px;
         color: white;
+        @media screen and (max-width: 500px) {
+          padding: 1em;
+        }
         h2 {
           font-size: 4rem;
+          @media screen and (max-width: 550px) {
+            font-size: 2rem;
+          }
         }
         p {
           font-size: 1.3rem;
           opacity: 0.8;
           margin-bottom: 1em;
+          @media screen and (max-width: 550px) {
+            font-size: 0.95rem;
+          }
         }
       }
     }
@@ -300,6 +382,11 @@
       display: flex;
       justify-content: center;
       margin: 1em;
+      .btn-main {
+        @media screen and (max-width: 550px) {
+          font-size: 1.1rem;
+        }
+      }
     }
   }
 
@@ -309,11 +396,19 @@
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 50px;
-
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
       .sth {
         font-size: 5rem;
         color: white;
         text-shadow: 0px 0px 10px white;
+        @media screen and (max-width: 1024px) {
+          font-size: 4rem;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 2.4rem;
+        }
       }
       .l {
         .teaser {
@@ -347,11 +442,21 @@
             grid-template-columns: 1fr 250px;
             align-items: center;
             border-width: 4px;
+            @media screen and (max-width: 800px) {
+              display: flex;
+            }
+            @media screen and (max-width: 420px) {
+              flex-wrap: wrap;
+            }
             h2 {
               font-size: 2rem;
               padding: 0.25em 1em;
               color: #4b94fb;
               text-shadow: 0px 0px 4px #80b0f3;
+              @media screen and (max-width: 550px) {
+                font-size: 1.4rem;
+              }
+              flex-grow: 1;
             }
             .goal {
               background: linear-gradient(to left, var(--p), var(--b));
@@ -366,6 +471,9 @@
               font-weight: bold;
               font-size: 1.5rem;
               padding: 0.25em 1em;
+              @media screen and (max-width: 550px) {
+                font-size: 1.1rem;
+              }
             }
           }
         }

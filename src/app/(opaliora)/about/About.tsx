@@ -58,7 +58,7 @@ export default function About({ d, vo }: Props) {
           </div>
         </div>
         <div className="confine">
-          <div className="ctrl">
+          <div className="ctrl l">
             <button
               className="btn btn-control"
               onClick={() => {
@@ -92,7 +92,7 @@ export default function About({ d, vo }: Props) {
               })}
             </AnimatePresence>
           </div>
-          <div className="ctrl">
+          <div className="ctrl r">
             <button
               className="btn btn-control"
               onClick={() => {

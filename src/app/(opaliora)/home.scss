@@ -16,6 +16,9 @@
     text-align: center;
     margin-top: 200px;
     margin-bottom: 100px;
+    @media screen and (max-width: 550px) {
+      margin-top: 10vh;
+    }
     border: none;
     border-radius: 0;
     color: white;
@@ -31,12 +34,18 @@
         height: 100px;
         margin-top: -50px;
         margin-bottom: -50px;
+        @media screen and (max-width: 800px) {
+          scale: 0.6;
+        }
       }
       h2 {
         font-family: var(--fontS);
         font-size: 2.5rem;
         padding: 1em;
         font-weight: lighter;
+        @media screen and (max-width: 800px) {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -64,12 +73,23 @@
     max-width: 1500px;
     gap: 1em;
     margin: 200px auto;
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    @media screen and (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
+    }
     .splash-c {
+      user-select: none;
+      pointer-events: none;
       .splash {
         animation: orasplash 4s infinite ease alternate;
         position: absolute;
         right: 40%;
-
+        @media screen and (max-width: 1280px) {
+          right: 30%;
+        }
         @keyframes orasplash {
           from {
             transform: scale(0.98) rotate(-5deg) translateY(-50px);
@@ -79,23 +99,44 @@
           }
         }
       }
+      @media screen and (max-width: 550px) {
+        height: 400px;
+        .splash {
+          height: 500px;
+          right: 50%;
+          position: relative;
+        }
+      }
     }
 
     article {
       padding-top: 200px;
       filter: drop-shadow(0px 0px 5px white);
+      @media screen and (max-width: 550px) {
+        padding: 1em;
+      }
       h2 {
         color: white;
         font-family: var(--fontSR);
         font-size: 6rem;
+        @media screen and (max-width: 420px) {
+          font-size: 4rem;
+        }
       }
       p {
         color: white;
         font-size: 1.3rem;
         margin-bottom: 1em;
+        @media screen and (max-width: 420px) {
+          font-size: 1rem;
+        }
       }
       .btn-main {
         margin: 20px 0;
+        @media screen and (max-width: 420px) {
+          font-size: 1.2rem;
+          outline-width: 2px;
+        }
       }
     }
   }

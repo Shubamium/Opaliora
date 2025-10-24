@@ -150,7 +150,7 @@ export default function Header({}: Props) {
               <img src="/d/gem6.png" alt="" className="gem" />
             </Link>
           </div>
-          <div className="art stp">
+          <div className="stp art">
             <AnimatePresence mode="popLayout">
               <motion.img
                 initial={{ opacity: 0 }}

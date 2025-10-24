@@ -52,7 +52,8 @@ export default function RootLayout({
           } as CSSProperties
         }
       >
-        <Loading />
+        {/* Enable Later */}
+        {/* <Loading /> */}
         <Header />
         {children}
       </body>

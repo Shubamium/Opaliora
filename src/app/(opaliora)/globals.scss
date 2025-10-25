@@ -118,6 +118,9 @@ button {
     margin: 20px auto;
     overflow-x: auto;
   }
+  @media screen and (max-width: 800px) {
+    border-radius: 1em;
+  }
   .btn-c {
     @media screen and (max-width: 1024px) {
       white-space: nowrap;

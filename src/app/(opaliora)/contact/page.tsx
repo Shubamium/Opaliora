@@ -112,6 +112,7 @@ export default function Contact({}: Props) {
                   name="name"
                   id="name"
                   placeholder="Write your name here!"
+                  required
                 />
               </div>
               <div className="if">
@@ -120,6 +121,7 @@ export default function Contact({}: Props) {
                   type="email"
                   name="email"
                   id="email"
+                  required
                   placeholder="Write your email here!"
                 />
               </div>
@@ -139,6 +141,7 @@ export default function Contact({}: Props) {
                 name="message"
                 id="message"
                 placeholder="Write your message here!"
+                required
               ></textarea>
             </div>
             <div className="actions">

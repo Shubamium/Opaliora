@@ -8,6 +8,9 @@ import useBackgroundChanger from "../utils/useBackgroundChanger";
 import { FaXTwitter } from "react-icons/fa6";
 import { MailProps, sendMail } from "../utils/mail.";
 import { BiLoaderCircle } from "react-icons/bi";
+import { FaTiktok, FaTwitch, FaYoutube } from "react-icons/fa";
+import { CgCrown } from "react-icons/cg";
+import { BsInstagram } from "react-icons/bs";
 export default function Contact({}: Props) {
   const { scope, activeBG } = useBackgroundChanger();
 
@@ -26,41 +29,65 @@ export default function Contact({}: Props) {
             <div className="c-h">
               <h2 className="sth"> Contact</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+                Find Ora Across Realms — Follow her adventures, streams, and
+                sparkly chaos on all her socials below.
               </p>
             </div>
             <div className="cl">
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
+              <a
+                href="https://x.com/opaliora"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
                 <FaXTwitter />
-                <span>Twitter</span>
+                <span>Twitter / X</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
-                <FaXTwitter />
-                <span>Twitter</span>
+              <a
+                href="https://www.twitch.tv/opaliora"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
+                <FaTwitch />
+                <span>Twitch</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
-                <FaXTwitter />
-                <span>Twitter</span>
+              <a
+                href="https://www.youtube.com/@Opaliora"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
+                <FaYoutube />
+                <span>Youtube</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
             </div>
             <div className="cl">
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
-                <FaXTwitter />
-                <span>Twitter</span>
+              <a
+                href="https://www.tiktok.com/@opaliora"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
+                <FaTiktok />
+                <span>Tiktok</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
-                <FaXTwitter />
-                <span>Twitter</span>
+              <a
+                href="https://throne.com/opaliora"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
+                <CgCrown />
+                <span>Throne</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
-              <a href="#" target="_blank" className="btn btn-ct stp flat">
-                <FaXTwitter />
-                <span>Twitter</span>
+              <a
+                href="https://instagram.com/opalioraa/"
+                target="_blank"
+                className="btn btn-ct stp flat"
+              >
+                <BsInstagram />
+                <span>Instagram</span>
                 <img src="/d/oribon.png" alt="" className="oribon" />
               </a>
             </div>
@@ -77,8 +104,9 @@ export default function Contact({}: Props) {
             <img src="/g/chibi3.png" alt="" className="chib" />
             <h2 className="sth"> Fan Mail Submission</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum
-              repellat similique suscipit? Lorem ipsum dolor sit amet.
+              Have a question, collaboration idea, or just want to send a little
+              starlight her way? Reach out below and your message will flutter
+              through the faerie winds straight to Ora’s crystal grove. 🌸💌
             </p>
           </div>
           <form

@@ -18,9 +18,8 @@ export default async function Merch({}: Props) {
       <section id="merch-h">
         <h2 className="sth">MERCH</h2>
         <p>
-          (Waiting for placeholder text)Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Voluptatibus omnis a, perspiciatis tempore magni
-          corporis soluta repellat laudantium cumque quidem?
+          Ora x UwU Market — Step into her enchanted collection of cozy,
+          crystal-kissed merch made just for her radiants.
         </p>
       </section>
 

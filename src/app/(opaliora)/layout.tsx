@@ -53,7 +53,7 @@ export default function RootLayout({
         }
       >
         {/* Enable Later */}
-        {/* <Loading /> */}
+        <Loading />
         <Header />
         {children}
       </body>

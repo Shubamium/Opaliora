@@ -18,7 +18,7 @@
     "create-payload-app": "^3.59.1",
     "graphql": "^16.11.0",
     "motion": "^12.23.22",
-    "next": "15.5.4",
+    "next": "15.5.9",
     "nodemailer": "^7.0.9",
     "payload": "^3.59.1",
     "react": "19.1.0",

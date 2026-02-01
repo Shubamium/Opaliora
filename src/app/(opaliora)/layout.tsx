@@ -53,6 +53,7 @@ export default function RootLayout({
           } as CSSProperties
         }
       >
+        <></>
         {/* Enable Later */}
         <Loading />
         <Header />

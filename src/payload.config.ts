@@ -52,7 +52,7 @@ export default buildConfig({
       },
       clientUploads: true,
       config: {
-        endpoint: "https://minio-api.venmi.art",
+        endpoint: "https://minio-api.venmiart.com",
         forcePathStyle: true,
         region: "us-east-1",
         credentials: {
